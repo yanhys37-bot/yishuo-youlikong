@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="theme-color" content="#7f9ad3">
+  <meta name="description" content="亦朔 × 我叫有理控，留给彼此的一片星空。">
+  <title>亦朔 × 我叫有理控</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%236f88c1'/%3E%3Cpath d='M32 8l5.3 14.7L52 28l-14.7 5.3L32 48l-5.3-14.7L12 28l14.7-5.3z' fill='%23fff8dd'/%3E%3Ccircle cx='47' cy='14' r='4' fill='%23fff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <main class="app-shell">
+    <section class="view view--password is-active" id="view-password" aria-labelledby="password-title" aria-hidden="false">
+      <div class="sky-glow" aria-hidden="true"></div>
+      <form class="glass-card password-card" id="password-form" novalidate>
+        <p class="eyebrow">FOR YOU · ONLY</p>
+        <h1 id="password-title">这是一个留给你的地方</h1>
+        <p class="card-copy">先输入暗号，再进去看看</p>
+        <label class="sr-only" for="password-input">输入暗号</label>
+        <div class="password-row">
+          <input id="password-input" name="password" type="password" inputmode="numeric" autocomplete="off" maxlength="6" placeholder="输入暗号" aria-describedby="password-feedback">
+          <button class="primary-button" id="enter-button" type="submit">进入</button>
+        </div>
+        <p class="form-feedback" id="password-feedback" role="status" aria-live="polite">&nbsp;</p>
+      </form>
+    </section>
+
+    <section class="view view--loading" id="view-loading" aria-labelledby="loading-message" aria-hidden="true" hidden>
+      <div class="loading-wash" aria-hidden="true"></div>
+      <div class="loading-content">
+        <img class="loading-character" id="loading-character" src="./assets/P2_CH_loading_f01.png" alt="亦朔与小黑猫正在翻看手中的本子">
+        <p class="loading-message" id="loading-message" aria-live="polite">正在确认身份……</p>
+        <div class="progress-track" role="progressbar" aria-label="加载进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <span class="progress-fill" id="loading-progress"></span>
+        </div>
+        <p class="loading-percent" id="loading-percent">0%</p>
+      </div>
+    </section>
+
+    <section class="view view--main" id="view-main" aria-labelledby="main-title" aria-hidden="true" hidden>
+      <div class="night-vignette" aria-hidden="true"></div>
+      <header class="site-signature">
+        <span>亦朔</span><span class="signature-star" aria-hidden="true">✦</span><span>我叫有理控</span>
+      </header>
+
+      <section class="glass-card timer-card" aria-label="相识时间">
+        <p class="eyebrow">OUR STORY · BEGAN</p>
+        <h1 id="main-title">我们已经相识了</h1>
+        <div class="timer-grid" aria-live="off">
+          <div class="time-unit"><strong id="days">0</strong><span>天</span></div>
+          <div class="time-unit"><strong id="hours">00</strong><span>小时</span></div>
+          <div class="time-unit"><strong id="minutes">00</strong><span>分钟</span></div>
+          <div class="time-unit"><strong id="seconds">00</strong><span>秒</span></div>
+        </div>
+        <time class="timer-subtitle" datetime="2026-09-21T01:25:00+08:00">从 2026.09.21 01:25 开始 · 北京时间</time>
+      </section>
+
+      <nav class="star-nav" aria-label="小站功能">
+        <button class="star-charm star-charm--one" type="button" data-feature="fortune" aria-label="打开今日签">
+          <span class="charm-string" aria-hidden="true"></span>
+          <svg viewBox="0 0 100 96" aria-hidden="true"><path d="M50 3 62 32l31 3-24 20 8 31-27-16-27 16 8-31L7 35l31-3Z"/></svg>
+          <span>今日签</span>
+        </button>
+        <button class="star-charm star-charm--two" type="button" data-feature="emergency" aria-label="打开应急按钮">
+          <span class="charm-string" aria-hidden="true"></span>
+          <svg viewBox="0 0 100 96" aria-hidden="true"><path d="M50 3 62 32l31 3-24 20 8 31-27-16-27 16 8-31L7 35l31-3Z"/></svg>
+          <span>应急按钮</span>
+        </button>
+        <button class="star-charm star-charm--three" type="button" data-feature="capsule" aria-label="打开时间胶囊">
+          <span class="charm-string" aria-hidden="true"></span>
+          <svg viewBox="0 0 100 96" aria-hidden="true"><path d="M50 3 62 32l31 3-24 20 8 31-27-16-27 16 8-31L7 35l31-3Z"/></svg>
+          <span>时间胶囊</span>
+        </button>
+      </nav>
+
+      <img class="bench-duo" src="./assets/P3_CH_bench_duo.png" alt="亦朔和我叫有理控并肩坐在长椅上">
+    </section>
+
+    <section class="view view--dev" id="view-dev" aria-labelledby="dev-title" aria-hidden="true" hidden>
+      <div class="night-vignette night-vignette--warm" aria-hidden="true"></div>
+      <div class="dev-copy glass-card">
+        <p class="eyebrow">WORK IN PROGRESS</p>
+        <h1 id="dev-title">该功能正在开发中</h1>
+        <p>我还在努力施工，先别急。</p>
+      </div>
+      <img class="builder-character" src="./assets/P4_CH_yishuo_builder.png" alt="戴着安全帽认真施工的亦朔">
+      <button class="back-button" id="back-button" type="button">返回主页</button>
+    </section>
+  </main>
+</body>
+</html>
